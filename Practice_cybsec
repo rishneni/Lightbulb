@@ -1,0 +1,59 @@
+#include<iostream.h>
+#include<conio.h>
+class time
+{
+int min, hr, sec;
+public: 
+void gettime();
+time timesum(time t2);
+void showsum();
+}
+void time :: gettime()
+{
+cout<<"Enter the time\n";
+cin>>sec>>min>>hr;
+}
+time time :: timesum(time t2)
+{
+date d3;
+if(sec>d2.sec)
+d3.sec = sec - d2.sec;
+else
+{
+min-=1;
+sec += 0;
+d3.sec = sec - d2.sec;
+}
+if(min>d2.min)
+d3.min = min - d2.min;
+else
+{
+hr-=1;
+min+=60;
+d3.min = min - d2.hr;
+}
+if(hr>d2.hr)
+d3.hr=hr-d2.hr;
+else
+d3.hr=0;
+if(d3.sec>=60)
+{
+d3.min+=d3.sec/60;
+d3.sec%=60;
+}
+if(d3.min>=60)
+{
+d3.hr+=d3.min/60
+d3.min%=60
+}
+return d3;
+}
+
+int main()
+
+{
+date d1, d2, d3;
+d2.gettime();
+d3=d1.timesum;
+d3.showtime;
+}
